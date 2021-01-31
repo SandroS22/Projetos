@@ -1,0 +1,21 @@
+import random
+
+
+def sel_dados():
+    selecao = input('Qual dado gostaria de utilizar?\nD6.\nD12.\nD20.\n').upper()
+    if selecao == 'D6':
+        print(random.choice(range(1, 6)))
+    elif selecao == 'D12':
+        print(random.choice(range(1, 12)))
+    elif selecao == 'D20':
+        print(random.choice(range(1, 20)))
+    else:
+        print('Por favor selecione uma das opções!')
+        sel_dados()
+
+
+continuar = 1
+
+while continuar:
+    sel_dados()
+    continuar = int(input('Deseja jogar novamente? Digite 1 para sim, ou 0 para não\n'))
